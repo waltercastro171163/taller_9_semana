@@ -1,0 +1,69 @@
+<app-menu></app-menu>
+
+
+<div class="container my-5">
+    <div class="row">
+  
+      <div class="col-md-10 mx-auto">
+        <div class="card">
+  
+          <div class="card-header bg-success text-center text-white">
+            <p  class="fs-3 " ><i class="bi bi-person-heart"  ></i>Formulario de Donaciones</p>
+          </div>
+  
+          <div class="card-body">
+
+            <!-- !OJO Aplicacion de codigo para captura de datos de un  formulario -->
+
+          <form [formGroup]="formValue">
+
+              <div class="row   bg-info pb-3 ">
+  
+                <div class="col-md-6">
+                  <label>Nombre</label>
+                  <input type="text" class="form-control" formControlName="nombres">
+                </div>
+  
+                <div class="col-md-6">
+                  <label>Apellido</label>
+                  <input type="text" class="form-control" formControlName="apellidos">
+                </div>
+                   
+                <div class="col-md-6">
+                  <label>Edad</label>
+                  <input type="number" class="form-control" formControlName="edad">
+                </div>
+  
+                <div class="col-md-6">
+                  <label>Ciudad</label>
+
+                  <!-- <select class="form-control" formControlNayyme="ciudad">  
+                    <option value="" selected>SELECCIONAR</option> -->
+                    <!-- *Recorrido por las ciudades -->
+                    <!-- <option *ngFor="let item of ciudad" value="{{item}}">{{item}}</option>
+                  </select> -->
+                  
+                  <select class="form-control" formControlName="ciudad">
+                    <option value="" selected>SELECCIONAR</option>
+                    <option *ngFor="let item of ciudad" value="{{item}}">{{item}}</option>
+                  </select>                  
+                </div>
+
+                <div class="col-md-6">
+                  <label>Valor donacion </label>
+                  <!-- <input type="text" class="form-control" formControlName="donacion"> -->
+                  <input type="number" class="form-control" placeholder="Ingrese el valor de la donacion" formControlName="valorDona" >
+                </div>
+
+              </div>
+              <!-- <button (click)="guardar_detalle(formValue)" type="submit" class="btn btn-outline-info my-3"> <i class="bi bi-save"></i> Guardar</button> -->
+          </form>
+          
+          <!-- Aqui se llama la funcion con un click que envia los datos del formulario  al arreglo -->
+          <button  (click)="guardar_detalle(formValue)" type="submit" class="btn btn-outline-success      my-3"> <i class="bi bi-save"></i> Guardar</button>
+          
+        </div>               
+        </div>
+      </div>
+  
+    </div>

@@ -1,0 +1,35 @@
+
+ <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu"   aria-label="Example icon-button with menu icon" class="taller">
+        <!-- <mat-icon>menu</mat-icon> -->
+        <span class="material-icons" style="font-size: 40px">view_headline</span>
+      </button>     
+  
+      <!-- Este funciona como un template. -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/inicio">Inicio</button>
+        <button mat-menu-item routerLink="/calculadora">Calculadora</button>
+        <button mat-menu-item routerLink="/form-donaciones">Form-donaciones</button>
+        <button mat-menu-item routerLink="/compon">Compon</button>
+        </mat-menu>
+
+
+      <span  class="taller">Taller novena semana</span>
+      <span class="example-spacer"></span>
+
+     <!-- iconos derechos de la barra -->
+      <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>  -->
+
+      
+
+
+     
+    </mat-toolbar>
+  </p>
